@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishal | UX Designer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      background-color: #111;
+      border-radius: 20px;
+      margin-top: 50px;
+      padding: 30px;
+      text-align: center;
+      width: 300px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    }
+
+    .menu-icon, .settings-icon {
+      position: absolute;
+      font-size: 22px;
+      color: white;
+    }
+
+    .menu-icon {
+      top: 15px;
+      left: 20px;
+    }
+
+    .settings-icon {
+      top: 15px;
+      right: 20px;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+      border: 3px solid #00ff55;
+    }
+
+    .username {
+      margin: 10px 0 0;
+      font-size: 24px;
+      color: #00ff55;
+    }
+
+    .role {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .socials {
+      margin-top: 10px;
+    }
+
+    .socials img {
+      width: 26px;
+      margin: 0 5px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+
+    .socials img:hover {
+      filter: none;
+    }
+
+    .follow-btn {
+      margin-top: 20px;
+      background: black;
+      color: #00ff55;
+      border: none;
+      padding: 10px 40px;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 0 15px #00ff55;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .follow-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .learn-more {
+      display: block;
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .learn-more:hover {
+      color: #00ff55;
+    }
+
+    .about-section {
+      background-color: #1a1a1a;
+      margin-top: 60px;
+      padding: 40px 20px;
+      max-width: 800px;
+      border-radius: 20px;
+    }
+
+    .about-section h2 {
+      color: #00ff55;
+      margin-bottom: 15px;
+    }
+
+    .about-section h3 {
+      margin-top: 40px;
+      color: #00ff88;
+    }
+
+    .about-section p, .about-section ul {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .about-section ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="menu-icon">☰</div>
+      <div class="settings-icon">⚙️</div>
+    </div>
+
+    <img src="image/profilepic.jpg" alt="Profile" class="profile-pic" />
+
+    <h1 class="username">vishal</h1>
+    <p class="role">UX User Experience Designer</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="www.linkedin.com/in/vishal-m-1a5333336"><img src="image/InBug-White.png" alt="linkedin" /></a>
+    </div>
+
+    <button class="follow-btn">follow</button>
+    <a href="#about" class="learn-more">learn more about my profile ↓</a>
+  </div>
+
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>
+         Hi this is vishal iam the guy has passionate about the design and want to be a frontend ui/ux designer and i have a stong base in problem solving in ui/ux design 
+    </p>
+
+    <h3>Education</h3>
+    <p>B.Sc. in Computer Science </p>
+
+    <h3>skill</h3>
+    <ul>
+      <li>illustator,figma</li>
+      <li>photoshop</li>
+      <li>And problem solving</li>
+      <li>sketching</li>
+      <br>
+      <center>
+        <p>Thank You</p>
+      </center>
+  </section>
+
+  <script>
+    document.querySelector('.learn-more').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

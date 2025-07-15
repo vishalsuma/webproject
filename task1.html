@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my first</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f0faff, #e0f0ff);
+      height: 2000px;
+    }
+
+    /* NAVIGATION BAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: linear-gradient(to right, #c93cdbdd, #2a05cacc);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      background: linear-gradient(to right, #a219d8, #5b09f3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.7);
+      color: #1a237e;
+      box-shadow: 0 2px 12px rgba(0, 128, 255, 0.3);
+    }
+
+    /* CONTENT */
+    .content {
+      padding-top: 100px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <nav id="navbar">
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <div class="content">
+    <h1>THIS IS MY FIRST PROJECT FOR PRODIGY INFOTECH</h1>
+    <p>Scroll down to see the navbar background change.</p>
+    <p>Keep scrolling to enjoy the smooth style enhancements!</p>
+    <p style="margin-top: 1000px;">🎉 You've reached the bottom!</p>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
